@@ -1,7 +1,8 @@
 import cv2
 import numpy as np
+import os
 
-def detect_red_and_yellow(img, Threshold=0.01):
+def detect_red_and_yellow(img, Threshold=0.001):
 
     desired_dim = (20, 30)  # width, height
 
@@ -40,6 +41,33 @@ def detect_red_and_yellow(img, Threshold=0.01):
 
 tl_cascade_classifier = cv2.CascadeClassifier("cascade/cascade.xml")
 
+for file in os.listdir("./test_images"):
+    model_color = (0,255,0)
+    thickness = 1
+    img = cv2.imread("./test_images/" + file)
+
+    save_img = img
+    boxes = tl_cascade_classifier.detectMultiScale(img)
+
+    for box in boxes:
+        # print(box)
+        for i in range(len(box)):
+            start = (box[0], box[1])
+            text_start = (box[0], box[1] - 10)
+            end = (start[0] + box[2], start[1] + box[3])
+
+            tl_status = "red" if detect_red_and_yellow(img[box[0]:end[0], box[1]:end[1]]) else "green"
+
+            save_img = cv2.rectangle(save_img, start, end, model_color, thickness)
+            cv2.putText(img, tl_status, text_start, cv2.FONT_HERSHEY_PLAIN, 0.9, (0,255,0), 1)
+
+    cv2.imshow("image", save_img)
+    cv2.imwrite("./test_results/" + file, save_img)
+    cv2.waitKey(0)
+    
+    # closing all open windows
+    cv2.destroyAllWindows()
+
 with open(r"image_descriptor\positive_test.txt", "r") as f:
     pos_imgs = f.readlines()
     model_color = (0,255,0)
@@ -50,7 +78,7 @@ with open(r"image_descriptor\positive_test.txt", "r") as f:
         img = cv2.imread(img_info[0][1:])
 
         boxes = tl_cascade_classifier.detectMultiScale(img)
-        print(boxes)
+
         for box in boxes:
             # print(box)
             for i in range(len(box)):
@@ -75,5 +103,3 @@ with open(r"image_descriptor\positive_test.txt", "r") as f:
         
         # closing all open windows
         cv2.destroyAllWindows()
-
-        print(boxes)
