@@ -1,9 +1,28 @@
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00321.jpg 3 640 289 18 30 822 381 12 20 34 415 42 45
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00408.jpg 2 654 0 57 66 1173 275 27 45
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00051.jpg 4 238 278 15 22 698 309 21 22 822 370 12 18 395 403 12 22
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00285.jpg 3 637 271 30 55 816 380 12 20 81 404 60 72
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00305.jpg 3 642 290 18 30 818 379 12 20 60 403 60 81
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00098.jpg 4 0 226 22 36 652 288 12 18 802 362 12 18 216 400 30 36
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00158.jpg 3 644 287 18 27 814 374 12 18 112 400 45 67
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00074.jpg 4 108 259 24 31 666 304 12 22 802 372 12 18 296 407 24 36
-../sample-dayClip6/sample-dayClip6/frames/dayClip6--00228.jpg 3 644 291 18 30 814 373 12 25 103 404 51 67
+..\images\dayClip6\frames\dayClip6--00050.jpg 243 279 18 27 704 312 12 18 824 372 12 18 398 404 18 18
+..\images\dayClip9\frames\dayClip9--00078.jpg 950 226 24 40
+..\images\dayClip9\frames\dayClip9--00338.jpg 1025 164 33 54 780 158 42 67
+..\images\dayClip6\frames\dayClip6--00147.jpg 645 289 15 22 812 374 12 18 121 407 33 45
+..\images\dayClip6\frames\dayClip6--00289.jpg 639 266 24 60 812 367 24 35 79 405 54 72
+..\images\dayClip9\frames\dayClip9--00203.jpg 1026 165 30 49 780 158 42 67
+..\images\dayClip6\frames\dayClip6--00033.jpg 342 292 18 36
+..\images\dayClip6\frames\dayClip6--00178.jpg 644 291 18 27 814 376 12 22 112 400 45 67
+..\images\dayClip9\frames\dayClip9--00667.jpg 1024 155 33 70 780 158 42 67
+..\images\dayClip6\frames\dayClip6--00192.jpg 644 290 18 22 814 376 12 18
+..\images\dayClip9\frames\dayClip9--00001.jpg 894 304 15 22 1119 385 12 18 769 300 27 27 248 366 18 36
+..\images\dayClip9\frames\dayClip9--00953.jpg 1115 182 84 117
+..\images\dayClip9\frames\dayClip9--00477.jpg 1025 164 33 54 780 158 42 67
+..\images\dayClip9\frames\dayClip9--00897.jpg 1052 178 30 60 793 177 42 55
+..\images\dayClip9\frames\dayClip9--00444.jpg 1025 164 33 54 780 158 42 67
+..\images\dayClip6\frames\dayClip6--00325.jpg 640 286 18 35 823 383 12 20 22 416 39 40
+..\images\dayClip6\frames\dayClip6--00284.jpg 637 271 30 55 816 372 18 30 81 404 60 72
+..\images\dayClip6\frames\dayClip6--00344.jpg 636 277 21 35 837 382 12 20
+..\images\dayClip9\frames\dayClip9--00222.jpg 1026 165 30 49 780 158 42 67
+..\images\dayClip6\frames\dayClip6--00236.jpg 644 291 18 30 814 373 12 25 103 404 51 67
+..\images\dayClip3\frames\dayClip3--00050.jpg 730 358 12 18
+..\images\dayClip9\frames\dayClip9--00227.jpg 1026 165 30 49 780 158 42 67
+..\images\dayClip9\frames\dayClip9--00422.jpg 1025 164 33 54 780 158 42 67
+..\images\dayClip9\frames\dayClip9--00062.jpg 914 238 24 40 1234 359 18 27 740 235 33 40
+..\images\dayClip9\frames\dayClip9--00759.jpg 1024 155 33 70 780 158 42 67
+..\images\dayClip9\frames\dayClip9--00136.jpg 1022 165 30 45
+..\images\dayClip3\frames\dayClip3--00048.jpg 595 381 12 22
+..\images\dayClip9\frames\dayClip9--00293.jpg 1025 164 33 54 780 158 42 67

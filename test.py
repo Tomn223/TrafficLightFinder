@@ -4,8 +4,10 @@ import numpy as np
 def detect_red_and_yellow(img, Threshold=0.01):
 
     desired_dim = (20, 30)  # width, height
+
     if not img.any(): # TODO: weird error
         return False
+    
     img = cv2.resize(img, desired_dim, interpolation=cv2.INTER_LINEAR)
     img_hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
 
@@ -43,30 +45,28 @@ with open(r"image_descriptor\positive_test.txt", "r") as f:
     model_color = (0,255,0)
     actual_color = (0,0,255)
     thickness = 1
-    for pos_img in pos_imgs[-10:]:
+    for pos_img in pos_imgs:
         img_info = pos_img.split(" ")
-        print(img_info[0])
         img = cv2.imread(img_info[0][1:])
 
         boxes = tl_cascade_classifier.detectMultiScale(img)
-
+        print(boxes)
         for box in boxes:
+            # print(box)
             for i in range(len(box)):
                 start = (box[0], box[1])
                 text_start = (box[0], box[1] - 10)
                 end = (start[0] + box[2], start[1] + box[3])
 
-                print(box[0],end[0], box[1],end[1])
                 tl_status = "stop" if detect_red_and_yellow(img[box[0]:end[0], box[1]:end[1]]) else "go"
 
                 img = cv2.rectangle(img, start, end, model_color, thickness)
                 cv2.putText(img, tl_status, text_start, cv2.FONT_HERSHEY_PLAIN, 0.9, (0,255,0), 1)
 
-        img_info = [int(img_info[i]) for i in range(1, len(img_info))]
-        img_info.insert(0, 0) # TODO: improve this
-        for i in range(img_info[1]):
-            start = (img_info[2+4*i], img_info[3+4*i])
-            end = (start[0] + img_info[4+4*i], start[1] + img_info[5+4*i])
+        actual_boxes = [[int(img_info[i]), int(img_info[i+1]), int(img_info[i+2]), int(img_info[i+3])] for i in range(1, len(img_info), 4)]
+        for x1, y1, w, h in actual_boxes:
+            start = (x1, y1)
+            end = (x1 + w, y1 + h)
             img = cv2.rectangle(img, start, end, actual_color, thickness)
 
         cv2.imshow("image", img)
