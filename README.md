@@ -41,12 +41,20 @@ boxes = tl_cascade_classifier.detectMultiScale(img)
 The detectMultiScale returns a list of bounding boxes for the detected traffic lights.
 
 ### HAAR Cascade Classifier
+The classifier uses simple HAAR features to build object classifiers. We try each haar feature and try them for every location and size. Most of these filters end up being irrelevant, but through Adaboost we can extract the most useful features (the ones that minimize error). 
 
+
+This still may leave us with many features which are useless at most locations in a window. That's where the cascade aspect comes into play, as these features are grouped into stages designed to weed out non traffic lights. Candidate objects are thrown out if they don't reach a certain matching threshold in a stage. This rapidly improves the efficiency of a cascade classifier.
+
+### Color detection
+After I detect the traffic lights, I'm passing the cropped image to a color detection function. This function converts the image to HSV, then checks if each pixel is within certain bounds corresponding to red and yellow. If enough red/yellow/green are detected, it will return a string with that color.
 ## Hardships/Improvements
 - Preprocess images
-- Need more data, better variety
+- Need more data, better variety (I only trained my classifier on images with black traffic lights, so it's failing on the yellow traffic light images)
+- The color detection function isn't working very well
 - Annoying data layout, model training format
 - Executables to train/create samples are hard to work with
+
 
 ## Links
 OpenCV tutorials:
