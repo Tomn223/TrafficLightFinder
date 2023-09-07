@@ -48,8 +48,14 @@ This still may leave us with many features which are useless at most locations i
 
 ### Color detection
 After I detect the traffic lights, I'm passing the cropped image to a color detection function. This function converts the image to HSV, then checks if each pixel is within certain bounds corresponding to red and yellow. If enough red/yellow/green are detected, it will return a string with that color.
-## Hardships/Improvements
-- Preprocess images
+
+## Results
+My model's bounding boxes are shown in green:
+
+
+![Image Not Found](/results/1.jpg) ![Image Not Found](/results/3.jpg)
+## Challenges/Improvements
+- I'd like to try preprocessing the images, maybe by looking for circular objects
 - Need more data, better variety (I only trained my classifier on images with black traffic lights, so it's failing on the yellow traffic light images)
 - The color detection function isn't working very well
 - Annoying data layout, model training format
