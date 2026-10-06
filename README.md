@@ -1,8 +1,6 @@
 # TrafficLightFinder
 Traffic light classification of LISA traffic light dataset using OpenCV
 
-## Problem
-
 ## Solution & Rationale
 I sourced and formatted images from the LISA traffic light dataset, then used OpenCV to train a cascade classifier specifically for detecting traffic lights. 
 
